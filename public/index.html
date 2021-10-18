@@ -1,0 +1,41 @@
+<html lang="en">
+    <header>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Helo firebase from Koma</title>
+    </header>
+
+    <body>
+        <h1> helo firebase from Koma !</h1>
+        <!-- the core firebase JS SDK is always required and must be listed first-->
+        <script src="/__/firebase/8.2.2/firebase-app.js"></script>
+
+        <!-- TODO: add SDKs for firebase products that you want to use 
+              https://firebase.google.com/docs/web/setup#available-libraries -->
+
+        <script src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+        <script src="/__/firebase/init.js"></script>
+
+        <script>
+            let analytics = firebase.analytics();
+            analytics.logEvent('homepage_conten',{
+                content_type:'hompage',
+                conten_id:'P1',
+                items:[{name:'homepage/index'}]
+            });
+        </script>
+
+        <!--
+            https://github.com/komavideo/LearnFirebase/tree/master/Lesson03
+            # 本地部署测试
+            $ firebase serve --only hosting --project=default
+            # 部署网站
+            $ firebase deploy --project=default
+
+            Project Console: https://console.firebase.google.com/project/myfirebase-d2462/overview
+            Hosting URL: https://myfirebase-d2462.web.app
+
+        -->
+    </body>
+
+</html>
